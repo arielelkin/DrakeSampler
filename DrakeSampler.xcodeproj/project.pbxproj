@@ -358,6 +358,7 @@
 				B0E30F9617240A6000AC4D9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

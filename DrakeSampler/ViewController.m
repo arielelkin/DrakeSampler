@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "AEAudioController.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) AEAudioController *audioController;
 
 @end
 
@@ -18,6 +21,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self setupAudio];
+    
+}
+
+-(void)setupAudio{
+    self.audioController = [[AEAudioController alloc]
+                            initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription]
+                            inputEnabled:YES]; // don't forget to autorelease if you don't use ARC!
 }
 
 - (void)didReceiveMemoryWarning
